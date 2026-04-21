@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MusicVerse</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <div class="sidebar-hdr">
+      <span class="logo-icon">&#9835;</span>
+      <span class="logo-txt">MusicVerse</span>
+    </div>
+    <nav id="nav">
+      <div class="nav-item active" data-tab="artists" onclick="MV.go('artists')"><span class="ne">&#127908;</span><span class="nl">Artists</span></div>
+      <div class="nav-item" data-tab="releases" onclick="MV.go('releases')"><span class="ne">&#128191;</span><span class="nl">Releases</span></div>
+      <div class="nav-item" data-tab="features" onclick="MV.go('features')"><span class="ne">&#129309;</span><span class="nl">Features</span></div>
+      <div class="nav-item" data-tab="most-streamed" onclick="MV.go('most-streamed')"><span class="ne">&#128293;</span><span class="nl">Most Streamed</span></div>
+      <div class="nav-item" data-tab="royalties" onclick="MV.go('royalties')"><span class="ne">&#128176;</span><span class="nl">Royalties</span></div>
+      <div class="nav-item" data-tab="bank" onclick="MV.go('bank')"><span class="ne">&#127974;</span><span class="nl">Bank</span></div>
+      <div class="nav-item" data-tab="settings" onclick="MV.go('settings')"><span class="ne">&#9881;</span><span class="nl">Settings</span></div>
+    </nav>
+    <div class="sidebar-ft">MusicVerse v1.0</div>
+  </aside>
+  <main id="main"></main>
+</div>
+<div id="mo" class="mo-ov hidden" onclick="MV.closeMo(event)">
+  <div class="mo-box" onclick="event.stopPropagation()">
+    <div class="mo-hdr"><h2 id="mo-t"></h2><button class="mo-x" onclick="MV.closeMo()">&times;</button></div>
+    <div id="mo-b"></div>
+    <div id="mo-f" class="mo-ft"></div>
+  </div>
+</div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
